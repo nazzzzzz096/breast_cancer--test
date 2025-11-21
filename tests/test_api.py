@@ -8,4 +8,4 @@ def test_apii():
     sample=data.data[0].tolist()
     response=client.post('/predict',json={'values':sample})
     assert response.status_code==200
-    assert response.json()['prediction'][0]
+    assert isinstance(response.json()['prediction'],float)
