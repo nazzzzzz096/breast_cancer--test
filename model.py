@@ -10,4 +10,4 @@ def load_model():
 def predict_cancer(sample):
     sample=np.array(sample).reshape(1,-1)
     model=load_model()
-    return int(model.predict(sample)[0])
+    return float(model.predict(sample)[0])
