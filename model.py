@@ -2,7 +2,7 @@ import numpy as np
 import pickle
 
 def load_model():
-    with open("model.pkl")as f:
+    with open("model.pkl","rb")as f:
         model=pickle.load(f)
 
     return model
